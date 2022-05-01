@@ -42,6 +42,8 @@ p {
 .content-container {
 	border-radius: 20px;
 	background-color: white;
+	box-shadow: 0 0 10px #b6b6b6;
+	-webkit-box-shadow: 0 0 10px #b6b6b6;
 }
 
 .nav {
@@ -401,7 +403,6 @@ figcaption {
 	animation-duration: 0.25s;
 	transition-timing-function: ease-in;
 	animation-fill-mode: both;
-
 }
 
 .scene_element--fadein {
