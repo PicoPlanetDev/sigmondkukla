@@ -35,7 +35,7 @@ p {
 }
 
 .section {
-	margin-bottom: 155px;
+	margin-bottom: 100px;
 	position: relative;
 }
 
@@ -448,4 +448,13 @@ figcaption {
 		display: block;
 		padding: 15px;
 	}
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #fff;
 }
