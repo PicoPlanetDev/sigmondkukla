@@ -451,10 +451,17 @@ figcaption {
 }
 
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	background-color: #fff;
+	border-radius: 10px;
+	background-color: #4da0f4;
+	border: solid 3px #eee;
+	/* -webkit-box-shadow: inset 0 0 5px #4da0f4;
+	box-shadow: inset 0 0 5px #4da0f4; */
+}
+
+textarea::-webkit-scrollbar-thumb {
+	border: solid 3px #fff;
 }
