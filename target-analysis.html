@@ -38,8 +38,12 @@
       </nav>
       <div class="content-container scene_element scene_element--fadeinup">
         <figure class="mb-0">
-          <img src="img/projects/target-analysis/banner.png" alt="Target Analysis Banner Art Image"
-            class="img-fluid img" />
+          <!-- <img src="img/projects/target-analysis/banner.png" alt="Target Analysis Banner Art Image" class="img-fluid img" /> -->
+          <picture class="img-fluid img">
+            <source srcset="img/projects/target-analysis/banner.webp" type="image/webp">
+            <source srcset="img/projects/target-analysis/banner.png" type="image/png">
+            <img src="img/projects/target-analysis/banner.png" alt="Target Analysis Image">
+          </picture>
         </figure>
         <div class="content">
           <h2 class="page-title">Target Analysis</h2>
