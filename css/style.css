@@ -326,7 +326,6 @@ figcaption {
 .img-overlay-wrap {
 	position: relative;
 	min-height: 280px;
-	background-image: url("../img/vr-3.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-top-left-radius: 20px;
