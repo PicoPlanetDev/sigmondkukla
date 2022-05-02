@@ -103,8 +103,21 @@ p {
 }
 
 .img {
+	/* border-top-left-radius: 20px;
+	border-top-right-radius: 20px; */
+
+	/* overflow: hidden; */
+	transition: transform 0.5s ease;
+}
+
+.mb-0 {
+	overflow: hidden;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+}
+
+.mb-0:hover img {
+	transform: scale(1.1);
 }
 
 footer {
