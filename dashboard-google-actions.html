@@ -38,35 +38,51 @@
       </nav>
       <div class="content-container scene_element scene_element--fadeinup">
         <figure class="mb-0">
-          <img src="img/projects/target-analysis/banner.webp" alt="Target Analysis Banner Art Image"
+          <img src="img/projects/dashboard-actions-google/banner.webp" alt="Dashboard Actions Banner Art Image"
             class="img-fluid img" />
         </figure>
         <div class="content">
-          <h2 class="page-title">Dashboard Google Action</h2>
+          <h2 class="page-title">
+            (Work in Progress)
+            <br>
+            Dashboard Actions on Google
+          </h2>
           <p class="mb-4">
-            This Google Action allows you to ask Google Assitstant about your grades. It retrieves grade information
-            from Powerschool SIS and displays it as part of a conversation with Google Assistant.
+            This Google Assistant Action allows you to ask Google Assitstant about your grades. It retrieves grade
+            information from Powerschool SIS and displays it as part of a conversation with Google Assistant.
           </p>
           <p>
-            I used Python to create the webhook as my fulfillment endpoint. When the user asks for a grade in a certain
-            class, the
+            The check_grade intent is triggered and the user query is parsed to determine what class to retrieve from my
+            endpoint. The class is a custom type with class names that appear in Powerschool SIS. Each name has synonyms
+            that I use to refer to my classes. This calls my webhook which gets the grade information from Powerschool
+            and returns it to Google in a friendly format.
           </p>
           <p>
-            By building Target Analysis, I have learned:
+            I used Glitch to host this project for developmet and testing. Because my current goals for this project
+            remain somewhat limited, I haven't implemented many features yet, such as using your own login information.
+          </p>
+          <p>
+            On my first attempt to host my webhook endpoint, I used PythonAnywhere. However, the endpoint must make
+            requests to a Powerschool URL that is not on the PythonAnywhere whitelist.
+            This brings up another problem in that Glitch makes apps sleep after five minutes and have a slow startup.
+            Often, the webhook request will time out in Actions on Google. To combat this, I added a wake handler to my
+            endpoint that (as quickly as possible) returns a ready response.
+          </p>
+          <p>
+            Through building and deploying this, I learned:
           <ul>
-            <li>OpenCV for image processing</li>
-            <li>Detection of features such as circles and holes</li>
-            <li>Advanced tkinter GUI creation</li>
-            <li>Saving data to CSV files</li>
-            <li>Plotting data with Matplotlib</li>
-            <li>OS interaction</li>
-            <li>Building Python with pyinstaller</li>
+            <li>Using Google Actions Console</li>
+            <li>Creating a Flask application</li>
+            <li>Parsing JSON</li>
+            <li>Hosting a Python application</li>
+            <li>Using Glitch</li>
+            <li>Using Postman to test requests</li>
           </ul>
           </p>
           <p>
-            Get Target Analysis on GitHub:
-            <a href="https://github.com/PicoPlanetDev/Target-Analysis"
-              target="_blank">https://github.com/PicoPlanetDev/Target-Analysis</a>
+            Take a look at the code on GitHub:
+            <a href="https://github.com/PicoPlanetDev/dashboard-api"
+              target="_blank">https://github.com/PicoPlanetDev/dashboard-api</a>
           </p>
         </div>
       </div>
