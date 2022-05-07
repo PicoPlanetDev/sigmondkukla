@@ -45,10 +45,10 @@
           <h2 class="page-title">
             (Work in Progress)
             <br>
-            Dashboard Actions on Google
+            Grades Dashboard Google Action
           </h2>
           <p class="mb-4">
-            This Google Assistant Action allows you to ask Google Assitstant about your grades. It retrieves grade
+            This Google Assistant Action allows you to ask Google Assistant about your grades. It retrieves grade
             information from Powerschool SIS and displays it as part of a conversation with Google Assistant.
           </p>
           <p>
@@ -58,15 +58,24 @@
             and returns it to Google in a friendly format.
           </p>
           <p>
-            I used Glitch to host this project for developmet and testing. Because my current goals for this project
-            remain somewhat limited, I haven't implemented many features yet, such as using your own login information.
+            I used Glitch to host this project for developmet and testing. I recently finished adding login
+            functionality
+            using Google Sign-In account linking. A separate webpage, available at <a
+              href="https://dashboard-api-web.glitch.me/">https://dashboard-api-web.glitch.me</a> makes POST requests to
+            a separate route on my server that saves login information. Thus, every time a request is made, the server
+            decrypts the authorization in the header from Google to get the user's email address, and uses the
+            corresponding saved login to access their grades.
           </p>
           <p>
             On my first attempt to host my webhook endpoint, I used PythonAnywhere. However, the endpoint must make
             requests to a Powerschool URL that is not on the PythonAnywhere whitelist.
             This brings up another problem in that Glitch makes apps sleep after five minutes and have a slow startup.
-            Often, the webhook request will time out in Actions on Google. To combat this, I added a wake handler to my
-            endpoint that (as quickly as possible) returns a ready response.
+            Often, the webhook request will time out in Actions on Google. To combat this, I make a GET request to my
+            endpoint on a schedule to keep it alive as long as possible.
+          </p>
+          <p>
+            Because this remains a prototype, users are stored in a CSV file in the .data folder. This is a protected
+            folder in Glitch that remains persistent. In the future, I intend to replace this with a database solution.
           </p>
           <p>
             Through building and deploying this, I learned:
