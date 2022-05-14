@@ -43,8 +43,6 @@
         </figure>
         <div class="content">
           <h2 class="page-title">
-            (Work in Progress)
-            <br>
             Grades Dashboard Google Action
           </h2>
           <p class="mb-4">
@@ -52,22 +50,10 @@
             Powerschool SIS and displays it as part of a conversation with Google Assistant.
           </p>
           <p>
-            I used Glitch to host this project for development and testing. I recently finished adding login
-            functionality using Google Sign-In account linking. A separate webpage, available at <a
-              href="https://dashboard-api-web.sigmondkukla.tk/">https://dashboard-api-web.sigmondkukla.tk/</a> makes
-            POST requests to
-            separate routes on my endpoint that control user data, such as creating, editing, and deleting users.
-          </p>
-          <p>
-            Every time a request is made, the user's Google account email is sent as a token to the endpoint. It is then
-            decrypted with Google's public key and checked for authenticity. Then, the user's PowerSchool data is
-            retrieved from the database, their grades are parsed from that, and the endpoint returns a response.
-          </p>
-          <p>
-            On my first attempt to host my webhook endpoint, I used PythonAnywhere. However, the endpoint must make
-            requests to a Powerschool URL that is not on the PythonAnywhere whitelist because there are many different
-            schools with their own URLs. With Glitch, this is not a limitation, however, the server must be kept alive
-            using a repeated GET request to keep responses snappy.
+            The Action's webhook endpoint is now hosted on my own server. A configuration webpage, available at
+            <a href="https://dashboard-api-web.sigmondkukla.tk/">https://dashboard-api-web.sigmondkukla.tk/</a> makes
+            POST requests to separate routes on my endpoint that control user data, such as creating, editing, and
+            deleting user information.
           </p>
           <p>
             Through building and deploying this, I learned:
@@ -76,7 +62,6 @@
             <li>Creating a Flask application</li>
             <li>Parsing JSON</li>
             <li>Hosting a Python application</li>
-            <li>Using Glitch</li>
             <li>Using Postman to test requests</li>
             <li>Creating a SQLite database</li>
             <li>Creating a web settings interface</li>
